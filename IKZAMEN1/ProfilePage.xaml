@@ -1,0 +1,32 @@
+﻿<Page x:Class="IKZAMEN1.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IKZAMEN1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProfilePage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock Text="Мой профиль" FontSize="20" Margin="0,0,0,10"/>
+            <TextBlock x:Name="tbFullName" FontSize="14"/>
+            <TextBlock x:Name="tbEmail" FontSize="14"/>
+            <TextBlock x:Name="tbLogin" FontSize="14"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgBookings" Grid.Row="1" AutoGenerateColumns="False"
+          IsReadOnly="True" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фильм" Binding="{Binding Seats.Screenings.Movys.Title}" Width="*"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Seats.Screenings.ScreeningDate}" Width="120"/>
+                <DataGridTextColumn Header="Место" Binding="{Binding Seats.SeatNumber}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

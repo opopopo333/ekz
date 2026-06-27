@@ -1,0 +1,51 @@
+﻿<Page x:Class="IKZAMEN1.ReviewsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IKZAMEN1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReviewsPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Оставить отзыв" FontSize="20" Margin="10"/>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Text="Выберите фильм"/>
+            <ComboBox x:Name="cbMovies" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Сюжет (1-5)"/>
+            <TextBox x:Name="tbStory" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Актёрская игра (1-5)"/>
+            <TextBox x:Name="tbActing" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Визуал (1-5)"/>
+            <TextBox x:Name="tbVisuals" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Комментарий"/>
+            <TextBox x:Name="tbComment" Margin="0,0,0,10" Height="80" 
+             TextWrapping="Wrap" AcceptsReturn="True"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgReviews" Grid.Row="2" AutoGenerateColumns="False"
+          IsReadOnly="True" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фильм" Binding="{Binding Movys.Title}" Width="*"/>
+                <DataGridTextColumn Header="Сюжет" Binding="{Binding ScoreStory}" Width="70"/>
+                <DataGridTextColumn Header="Игра" Binding="{Binding ScoreActing}" Width="70"/>
+                <DataGridTextColumn Header="Визуал" Binding="{Binding ScoreVisuals}" Width="70"/>
+                <DataGridTextColumn Header="Комментарий" Binding="{Binding Comment}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Отправить отзыв" Grid.Row="3" Margin="10" Click="BtnReview_Click"/>
+    </Grid>
+</Page>

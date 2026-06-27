@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4075d81d876c494486de0d05155baeea" Name="Diagram1">
+        <EntityTypeShape EntityType="KinoClubModel.Booking" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoClubModel.Movy" Width="1.5" PointX="1.5" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoClubModel.Review" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoClubModel.Screening" Width="1.5" PointX="1.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoClubModel.Seat" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoClubModel.User" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="KinoClubModel.FK__Bookings__SeatId__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoClubModel.FK__Bookings__UserId__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoClubModel.FK__Reviews__MovieId__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoClubModel.FK__Screening__Movie__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoClubModel.FK__Reviews__UserId__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoClubModel.FK__Seats__Screening__534D60F1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
