@@ -23,9 +23,9 @@
         <DataGrid x:Name="dgBookings" Grid.Row="1" AutoGenerateColumns="False"
           IsReadOnly="True" Margin="10">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фильм" Binding="{Binding Seats.Screenings.Movys.Title}" Width="*"/>
-                <DataGridTextColumn Header="Дата" Binding="{Binding Seats.Screenings.ScreeningDate}" Width="120"/>
-                <DataGridTextColumn Header="Место" Binding="{Binding Seats.SeatNumber}" Width="80"/>
+                <DataGridTextColumn Header="Фильм" Binding="{Binding Seat.Screening.Movy.Title}" Width="*"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Seat.Screening.ScreeningDate}" Width="120"/>
+                <DataGridTextColumn Header="Место" Binding="{Binding Seat.SeatNumber}" Width="80"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

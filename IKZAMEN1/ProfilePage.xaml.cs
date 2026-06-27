@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace IKZAMEN1
 {
@@ -34,8 +35,11 @@ namespace IKZAMEN1
 
             // Мои брони
             dgBookings.ItemsSource = Core.Context.Bookings
-                .Where(b => b.UserId == user.Id)
-                .ToList();
+    .Include("Seat")
+    .Include("Seat.Screening")
+    .Include("Seat.Screening.Movy")
+    .Where(b => b.UserId == user.Id)
+    .ToList();
         }
     }
 }
